@@ -31,3 +31,7 @@
 * `POST /api/spots/:id/reviews`
 * `PATCH /api/spots/:id/reviews/:id`
 * `DELETE /api/spots/:id/reviews/:id`
+
+### Guests
+* `GET /api/guests`
+* `DELETE /api/guests/:id`
