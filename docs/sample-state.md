@@ -5,9 +5,8 @@
     lname: "user",
     email: "guest-user@gmail.com",
     picture: pic_url,
-    bookings: []
   },
-  spots: {
+  sofas: {
     1: {
       address: "1234 spear st.",
       city: "San Francisco",
@@ -29,7 +28,16 @@
       arrive_date: 02/01/2017,
       depart_date: 02/05/2017,
       num_of_guests: 1,
-      host_id: 1,
+      host_id: 2,
+      guest_id: 1 (current user's id)
+    }
+  }
+  guests: {
+    2: {
+      arrive_date: 03/01/2017,
+      depart_date: 03/15/2017,
+      num_of_guests: 2,
+      host_id: 1, (current user's id)
       guest_id: 2
     }
   }
