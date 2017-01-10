@@ -40,3 +40,7 @@ Objective: Able to request bookings and show on dashboard
 
 ### Phase 4: Reviews (2 days -- finish thurs night)
 Objective: Add review and toggle reviews for spots
+
+### Bonus: Add user and host profiles
+
+### Bonus: Messaging
