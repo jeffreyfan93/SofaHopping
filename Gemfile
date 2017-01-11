@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
-
+gem 'bcrypt'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'pry-rails'
+gem 'annotate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
 # Use postgresql as the database for Active Record
@@ -41,5 +45,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem 'rack-livereload'
 end
-
