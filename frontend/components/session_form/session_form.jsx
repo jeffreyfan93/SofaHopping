@@ -33,16 +33,16 @@ class SessionForm extends React.Component {
   navLink() {
     if (this.props.formType === 'login') {
       return (
-        <div>
-          <p>Don't have an account?</p>
-          <Link to="/signup">Join</Link>
+        <div className="login-signup-navlink">
+          <div>Don't have an account{'?'}</div>
+          <Link to="/signup" className="navlink-button">Join</Link>
         </div>
       );
     } else {
       return (
-        <div>
-          <div>Already a member?</div>
-          <Link to="/login">Log In</Link>
+        <div className="login-signup-navlink">
+          <div>Already a member{'?'}</div>
+          <Link to="/login" className="navlink-button">Log In</Link>
         </div>
       );
     }
@@ -50,9 +50,17 @@ class SessionForm extends React.Component {
 
   header() {
     if (this.props.formType === 'login') {
-      return ("Log in to SofaHopping");
+      return (
+        <div className="login-signup-header">
+          Log in to Sofahopping
+        </div>
+      );
     } else {
-      return ("Join SofaHopping for free!");
+      return (
+        <div className="login-signup-header">
+          Join Sofahopping for free!
+        </div>
+      );
     }
   }
 
@@ -62,15 +70,17 @@ class SessionForm extends React.Component {
         <div>
           <input
             type="text"
-            placeholder="First Name"
+            placeholder="First name"
             value={this.state.first_name}
-            onChange={this.update('first_name')} />
+            onChange={this.update('first_name')}
+            className="first-last-input" />
 
           <input
             type="text"
-            placeholder="Last Name"
+            placeholder="Last name"
             value={this.state.last_name}
-            onChange={this.update('last_name')} />
+            onChange={this.update('last_name')}
+            className="first-last-input" />
         </div>
       );
     }
@@ -99,27 +109,29 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        {this.header()}
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <div className="login-form">
-            {this.joinName()}
-            <input
-              type="text"
-              placeholder="Email"
-              value={this.state.email}
-              onChange={this.update('email')} />
-            <br/>
-            <input
-              type="password"
-              placeholder="Password"
-              value={this.state.password}
-              onChange={this.update('password')} />
-            <br/>
-            <input type="submit" value={this.submitButton()}></input>
-            <br/>
-            {this.renderErrors()}
-          </div>
-        </form>
+        <div>
+          {this.header()}
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+              {this.joinName()}
+              <input
+                type="text"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="email-password-input" />
+              <br/>
+              <input
+                type="password"
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="email-password-input" />
+              <br/>
+              <input type="submit" value={this.submitButton()} className="login-signup-submit"></input>
+              <br/>
+              {this.renderErrors()}
+          </form>
+        </div>
         <div>
           {this.navLink()}
         </div>

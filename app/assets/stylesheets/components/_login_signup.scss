@@ -1,0 +1,88 @@
+.login-form-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: absolute;
+  height: 500px;
+  width: 350px;
+  margin: -250px 0 0 -175px;
+  top: 50%;
+  left: 50%;
+
+  // padding: 10px;
+  border-radius: 3px;
+
+  font-family: 'Source Sans Pro';
+}
+
+.login-signup-header {
+  display: flex;
+  justify-content: center;
+
+  font-size: 24px;
+  color: $ocean-blue;
+  background-color: $off-white;
+  padding: 15px;
+  border-radius: 3px 3px 0 0;
+}
+
+.login-form-box {
+  padding: 8px;
+}
+
+.first-last-input {
+  height: 40px;
+  width: 147px;
+  margin: 5px;
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
+
+.email-password-input {
+  height: 40px;
+  width: 314px;
+  margin: 5px;
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid gray;
+
+}
+
+.login-signup-submit {
+  display: flex;
+  justify-content: center;
+  height: 42px;
+  width: 324px;
+  padding: none;
+  margin: 5px;
+  border-radius: 3px;
+
+  font-size: 16px;
+  background-color: $ocean-blue;
+  color: white;
+}
+
+.login-signup-navlink {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+  color: gray;
+}
+
+.navlink-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: $ocean-blue;
+  text-decoration: none;
+  padding: 10px 40px;
+  margin: 5px;
+  border-radius: 3px;
+  border: 1px solid $ocean-blue;
+}

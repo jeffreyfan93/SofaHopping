@@ -1,4 +1,4 @@
-# SofaHopping
+# Sofahopping
 
 [Heroku Link](https://sofa-hopping.herokuapp.com/)
 
@@ -6,7 +6,7 @@
 
 
 ## Minimum Viable Product
-SofaHopping is a web application inspired by Couchsurfing.
+Sofahopping is a web application inspired by Couchsurfing.
 1. New account creation, login, and guest/demo login
 2. Production README
 3. Hosting on Heroku

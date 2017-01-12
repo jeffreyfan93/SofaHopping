@@ -1,19 +1,15 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import SplashContainer from './splash/splash_container';
+import NavbarContainer from './navbar/navbar_container';
 import { Link } from 'react-router';
 
 const App = ({ children }) => (
   <div>
-    <h1>SofaHopping</h1>
-    <div>
-      <Link to="/signup">Join</Link>
-    </div>
-    <div>
-      <Link to="/login">Log In</Link>
-    </div>
 
-    <GreetingContainer />
-    { children }
+
+    <NavbarContainer />
+    <SplashContainer />
+    {children}
   </div>
 );
 
