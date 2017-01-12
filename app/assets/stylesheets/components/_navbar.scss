@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-to-home {
+  font-family: 'Shadows Into Light', 'Jenna Sue';
+  color: $dirt-orange;
+  font-size: 26px;
+  padding: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button-join {
+  padding: 10px 70px;
+  margin: 10px;
+  background-color: $ocean-blue;
+  border: 1px solid $ocean-blue;
+  border-radius: 3px;
+
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+
+  transition: background-color 0.3s ease;
+}
+
+.nav-button-join:hover {
+  background-color: $dark-ocean-blue;
+
+}
+
+.nav-button-login {
+  padding: 10px 50px;
+  margin: 10px;
+  border: 1px solid $ocean-blue;
+  border-radius: 3px;
+
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  font-weight: 600;
+  color: $ocean-blue;
+
+  transition: background-color 0.3s ease;
+}
+
+.nav-button-login:hover {
+  background-color: $blue-off-white;
+}
