@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'rails_12factor'
 gem 'bcrypt'
 gem 'better_errors'
 gem 'binding_of_caller'
@@ -48,4 +47,9 @@ group :development do
   gem 'spring'
   # gem 'guard-livereload', require: false
   # gem 'rack-livereload'
+end
+
+group :production do
+  gem 'newrelic_rpm'
+  gem 'rails_12factor' # error feedback
 end
