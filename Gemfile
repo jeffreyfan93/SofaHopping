@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor'
 gem 'bcrypt'
 gem 'better_errors'
 gem 'binding_of_caller'
