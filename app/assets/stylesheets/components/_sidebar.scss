@@ -1,0 +1,108 @@
+.dashboard-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: $sans-pro;
+  background-color: white;
+  box-shadow: 4px 4px gray;
+
+
+  // testing
+  border: 1px solid black;
+
+}
+
+.sidebar-user-info {
+  width: 100%;
+}
+
+.sidebar-profile-picture {
+  width: 40%;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 4%;
+  display: inline-block;
+
+  border: 1px solid black;
+}
+
+.name-status {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  vertical-align: top;
+  margin-top: 4%;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.user-status {
+  font-size: 18px;
+}
+
+.user-sofas {
+  margin: 10px
+}
+
+.user-sofas-text {
+  font-size: 24px;
+
+}
+
+.user-sofa {
+  margin: 10px;
+
+  border: 1px solid red;
+}
+
+.user-sofa-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-sofa-picture {
+  width: 50%;
+  height: auto;
+  border: 1px solid black;
+}
+
+.user-sofa-address {
+
+}
+
+.user-num-guests {
+
+}
+
+.user-reviews {
+
+}
+
+.user-sofa-buttons {
+
+}
+
+// sofa-form
+
+.sofa-form-screen {
+  position: fixed;
+  left: 34%;
+  top: 10vh;
+  width: 66%;
+  height: 90vh;
+  border: 1px solid red;
+}
+
+.sofa-form-container {
+
+}
+
+.sofa-form-num-of-guests {
+  display: block;
+  border: 1px solid blue;
+}

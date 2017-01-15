@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
-  validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true
+  validates :picture, :first_name, :last_name, :email, :password_digest, :session_token, presence: true
   validates :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
   attr_reader :password
+
+  has_many :sofas
 
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness

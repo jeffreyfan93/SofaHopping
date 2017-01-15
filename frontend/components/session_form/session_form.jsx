@@ -96,7 +96,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="login-signup-errors">
         {this.props.errors.map((error, i) => (
           <li key={i}>
             {error}
@@ -108,34 +108,37 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <div>
-          {this.header()}
-          <form onSubmit={this.handleSubmit} className="login-form-box">
-              {this.joinName()}
-              <input
-                type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="email-password-input" />
-              <br/>
-              <input
-                type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="email-password-input" />
-              <br/>
-              <input type="submit" value={this.submitButton()} className="login-signup-submit"></input>
-              <br/>
-              {this.renderErrors()}
-          </form>
-        </div>
-        <div>
-          {this.navLink()}
+      <div className="login-signup-screen">
+        <div className="login-form-container">
+          <div>
+            {this.header()}
+            <form onSubmit={this.handleSubmit} className="login-form-box">
+                {this.joinName()}
+                <input
+                  type="text"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="email-password-input" />
+                <br/>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="email-password-input" />
+                <br/>
+                <input type="submit" value={this.submitButton()} className="login-signup-submit"></input>
+                <br/>
+                {this.renderErrors()}
+            </form>
+          </div>
+          <div>
+            {this.navLink()}
+          </div>
         </div>
       </div>
+
     );
   }
 

@@ -19,6 +19,12 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
 @import "base/colors.scss";
+@import "base/fonts.scss";
 
+
+
+.nav-blank-space {
+  height: 10vh;
+}
 
 @import "components/*";

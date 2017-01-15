@@ -41,7 +41,7 @@ class Navbar extends React.Component {
             <Link to="/sofas" className="nav-button">Sofas</Link>
           </div>
           <div>
-            <button onClick={this.splashOnLogout} className="nav-button">Log out</button>
+            <button onClick={this.splashOnLogout} className="nav-button-logout">Log out</button>
           </div>
         </div>
       );
