@@ -11,7 +11,7 @@
 |password_digest|string     |not null                 |
 |session_token  |string     |not null, indexed, unique|
 
-## spots
+## sofas
 | column name       | data type | details                 |
 |-------------------|-----------|-------------------------|
 |id                 |integer    |not null, primary key    |
@@ -29,6 +29,7 @@
 |arrive_date    |date       |not null                 |
 |depart_date    |date       |not null                 |
 |# of guests    |integer    |not null                 |
+|sofa_id        |integer    |not null, foreign key    |
 |host_id        |integer    |not null, foreign key    |
 |guest_id       |integer    |not null, foreign key    |
 

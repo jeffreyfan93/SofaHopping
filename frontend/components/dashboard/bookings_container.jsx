@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import Splash from './splash';
+import Bookings from './bookings';
 
-const mapStateToProps = (state) => ({
-  currentUser: state.session.currentUser
+const mapStateToProps = state => ({
+
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Splash);
+)(Bookings);

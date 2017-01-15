@@ -1,0 +1,17 @@
+.dashboard-container {
+  display: flex;
+  background-color: $off-white;
+}
+
+.dashboard-container-left {
+  width: 33%;
+  margin: 20px;
+}
+
+.dashboard-container-right {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+  margin: 20px;
+
+}

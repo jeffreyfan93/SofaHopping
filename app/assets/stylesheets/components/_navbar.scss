@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: white;
 }
 
 .nav-to-home {
@@ -23,7 +28,7 @@
   border: 1px solid $ocean-blue;
   border-radius: 3px;
 
-  font-family: 'Source Sans Pro';
+  font-family: $sans-pro;
   font-size: 16px;
   font-weight: 600;
   color: white;
@@ -42,7 +47,7 @@
   border: 1px solid $ocean-blue;
   border-radius: 3px;
 
-  font-family: 'Source Sans Pro';
+  font-family: $sans-pro;
   font-size: 16px;
   font-weight: 600;
   color: $ocean-blue;
@@ -51,5 +56,45 @@
 }
 
 .nav-button-login:hover {
+  background-color: $blue-off-white;
+}
+
+// when logged in
+
+.nav-button {
+  padding: 10px 50px;
+  margin: 10px;
+  background-color: $ocean-blue;
+  border: 1px solid $ocean-blue;
+  border-radius: 3px;
+
+  font-family: $sans-pro;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: $dark-ocean-blue;
+
+}
+
+.nav-button-logout {
+  padding: 10px 15px;
+  margin: 10px;
+  border: 1px solid $ocean-blue;
+  border-radius: 3px;
+
+  font-family: $sans-pro;
+  font-size: 16px;
+  font-weight: 600;
+  color: $ocean-blue;
+
+  transition: background-color 0.3s ease;
+}
+
+.nav-button-logout:hover {
   background-color: $blue-off-white;
 }

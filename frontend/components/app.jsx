@@ -1,16 +1,15 @@
 import React from 'react';
-import SplashContainer from './splash/splash_container';
 import NavbarContainer from './navbar/navbar_container';
-import { Link } from 'react-router';
 
-const App = ({ children }) => (
-  <div>
+const App = (props, { currentUser }) => {
 
-
-    <NavbarContainer />
-    <SplashContainer />
-    {children}
-  </div>
-);
+  return (
+    <div>
+      <NavbarContainer />
+      <div className="nav-blank-space"></div>
+      {props.children}
+    </div>
+  );
+};
 
 export default App;

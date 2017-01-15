@@ -8,6 +8,8 @@
   },
   sofas: {
     1: {
+      lat: 0.0,
+      lng: 0.0,
       address: "1234 spear st.",
       city: "San Francisco",
       num_of_guests: 3,
@@ -30,6 +32,7 @@
       num_of_guests: 1,
       host_id: 2,
       guest_id: 1 (current user's id)
+      sofa_id: 1
     }
   }
   guests: {
