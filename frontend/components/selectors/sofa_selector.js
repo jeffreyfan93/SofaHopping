@@ -7,3 +7,13 @@ export const selectCurrentUserSofas = (sofas, currentUser) => {
   });
   return (currentUserSofas);
 };
+
+export const selectNotMySofas = (sofas, currentUser) => {
+  let notMySofas = [];
+  Object.keys(sofas).map(id => {
+    if(sofas[id].user_id !== currentUser.id) {
+      notMySofas.push(sofas[id]);
+    }
+  });
+  return (notMySofas);
+};

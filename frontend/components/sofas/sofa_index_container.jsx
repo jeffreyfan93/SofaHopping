@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import { fetchSofas } from '../../actions/sofa_actions';
 import SofaIndex from './sofa_index';
+import { selectNotMySofas } from '../selectors/sofa_selector';
 
 const mapStateToProps = state => ({
-  sofas: Object.keys(state.sofas).map(id => state.sofas[id])
+  sofas: selectNotMySofas(state.sofas, state.session.currentUser)
 });
 
 const mapDispatchToProps = dispatch => ({

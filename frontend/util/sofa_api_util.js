@@ -27,3 +27,11 @@ export const deleteSofa = id => (
     url: `api/sofas/${id}`
   })
 );
+
+export const fetchSearchSofas = (city, guests) => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/sofas',
+    data: { search_city: city, search_guests: guests }
+  })
+);

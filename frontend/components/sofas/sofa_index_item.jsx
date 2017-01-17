@@ -10,20 +10,20 @@ class SofaIndexItem extends React.Component {
     const { address, city, num_of_guests, picture, id } = this.props.sofa;
 
     return(
-      <li>
-        <div>
-          <img src={picture} />
+      <li className="sofa-index-item">
+        <div className="sofa-index-item-info">
+          <div className="sofa-item-no-reviews">
+            <div className="sofa-item-picture"><img src={picture} /></div>
+            <div className="sofa-info-address-guests">
+              <div className="sofa-item-address">{address}, {city}</div>
+              <div className="sofa-item-num-of-guests">Spots available: {num_of_guests}</div>
+            </div>
+          </div>
+          <div className="sofa-item-reviews">Reviews</div>
         </div>
-        <div>
-          Address: {address}, {city}
+        <div className="sofa-item-request">
+          <Link to={`/sofas/${id}/request`}>Request Stay</Link>
         </div>
-        <div>
-          {num_of_guests} open sofas
-        </div>
-        <Link to={`/sofas/${id}/request`}>
-          Request Stay
-        </Link>
-        <div>Reviews</div>
       </li>
     );
   }

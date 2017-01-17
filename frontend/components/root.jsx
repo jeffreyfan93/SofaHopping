@@ -5,7 +5,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import NavbarContainer from './navbar/navbar_container';
 import SessionFormContainer from './session_form/session_form_container';
-import SofaIndexContainer from './sofas/sofa_index_container';
+import SofasContainer from './sofas/sofas_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import SplashContainer from './splash/splash_container';
 
@@ -28,7 +28,7 @@ const Root = ({ store }) => {
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
           <Route path="/dashboard" component={DashboardContainer} />
-          <Route path="/sofas" component={SofaIndexContainer}>
+          <Route path="/sofas" component={SofasContainer}>
             <Route path="/sofas/:sofaId/request" />
           </Route>
         </Route>
