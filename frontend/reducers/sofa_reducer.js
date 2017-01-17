@@ -13,8 +13,11 @@ const SofaReducer = (state = {errors: []}, action) => {
   let newState = merge({}, state);
   switch (action.type) {
     case RECEIVE_SOFAS:
-      newState.sofas = action.sofas;
-      return newState;
+      let response = action.sofas;
+      response.errors = [];
+      return response;
+      // newState.sofas = action.sofas;
+      // return newState;
     case RECEIVE_SOFA:
       newState[action.sofa.id] = action.sofa;
       return newState;
