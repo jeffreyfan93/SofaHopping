@@ -1,0 +1,153 @@
+.sofas-index-container {
+  box-sizing: border-box;
+  height: 94%;
+  overflow: hidden;
+  margin: 0px 15px;
+}
+
+.sofas-index-title {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4%;
+  font-size: 32px;
+  border-bottom: 1px solid gray;
+}
+
+.sofas-index {
+  height: 87%;
+  overflow-y: scroll;
+
+}
+
+.sofa-index-item {
+  display: flex;
+  border: 1px solid gray;
+  border-left: none;
+  border-right: none;
+  background-color: blanchedalmond;
+}
+
+.sofa-index-item-info {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.sofa-item-no-reviews {
+  display: flex;
+}
+
+.sofa-item-picture {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.sofa-info-address-guests {
+  display: flex;
+  flex-direction: column;
+}
+
+.sofa-item-address {
+
+}
+
+.sofa-item-num-of-guests {
+
+}
+
+.sofa-item-reviews {
+
+}
+
+.sofa-item-request {
+  width: 50%;
+}
+
+
+
+
+
+.user-sofas {
+  height: 70%;
+  margin: 0px 15px;
+  overflow-y: scroll;
+}
+
+#user-sofas-text {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.user-sofas-text {
+  font-size: 24px;
+  margin: 15px;
+}
+
+.user-sofa {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 5px;
+  border: 1px solid gray;
+  border-left: none;
+  border-right: none;
+
+  background-color: blanchedalmond;
+}
+
+.user-sofa-info {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.user-sofa-picture {
+  width: 40%;
+  height: 100%;
+  border: 1px solid black;
+  margin-right: 15px;
+}
+
+.user-sofa-info-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-sofa-address {
+  margin-bottom: 15px;
+}
+
+.user-num-guests {
+
+}
+
+.user-reviews {
+  width: 55px;
+  margin-bottom: 10px;
+  padding: 2px;
+  background-color: $dirt-orange;
+  border-radius: 3px;
+  color: white;
+}
+
+.user-reviews:hover{
+  transform: scale(1.1);
+}
+
+.user-sofa-buttons {
+
+}
+
+.user-sofa-button {
+  margin-right: 15px;
+  padding: 2px;
+  background-color: $dirt-orange;
+  border-radius: 3px;
+  color: white;
+}
+
+.user-sofa-button:hover {
+  transform: scale(1.1);
+}

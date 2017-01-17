@@ -26,7 +26,7 @@ class MySofaIndexItem extends React.Component {
 
   showForm() {
     if (this.state.toggleOpen) {
-      return(<SofaFormContainer formType='update' sofa={this.props.sofa}/>);
+      return(<SofaFormContainer formType='update' sofa={this.props.sofa} toggleForm={this.toggleForm}/>);
     }
   }
 
@@ -40,19 +40,20 @@ class MySofaIndexItem extends React.Component {
             id } = this.props.sofa;
     return(
       <li className="user-sofa">
-          <div className="user-sofa-address">
-            <div>Address: {address}</div>
-            <div>{city}, {state}, {zip}</div>
-          </div>
         <div className="user-sofa-info">
           <div className="user-sofa-picture"><img src={picture} /></div>
-          <div className="user-num-guests">{num_of_guests} open sofas</div>
+          <div className="user-sofa-info-right">
+            <div className="user-sofa-address">
+              <div>{address}</div>
+              <div>{city}, {state}, {zip}</div>
+            </div>
+            <div className="user-num-guests">Spots available: {num_of_guests}</div>
+          </div>
         </div>
-
-        <div className="user-reviews">Reviews</div>
+        <button className="user-reviews">Reviews</button>
         <div className="user-sofa-buttons">
-          <button onClick={this.toggleForm}>Update Sofa</button>
-          <button onClick={this.removeSofa}>Remove Sofa</button>
+          <button onClick={this.toggleForm} className="user-sofa-button">Update Sofa</button>
+          <button onClick={this.removeSofa} className="user-sofa-button">Remove Sofa</button>
           <div>{this.showForm()}</div>
         </div>
       </li>

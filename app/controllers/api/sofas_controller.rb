@@ -2,6 +2,9 @@ class Api::SofasController < ApplicationController
 
   def index
     @sofas = Sofa.all
+    if (params[:search_city] && params[:search_guests])
+      @sofas = @sofas.where(city: params[:search_city]).where(num_of_guests: sofa_range)
+    end
     render :index
   end
 
@@ -41,8 +44,14 @@ class Api::SofasController < ApplicationController
       :zip,
       :num_of_guests,
       :picture,
-      :user_id
+      :user_id,
+      :search_guests,
+      :search_city
     )
+  end
+
+  def sofa_range
+    ((params[:search_guests].to_i)..5)
   end
 
 end

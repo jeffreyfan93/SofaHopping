@@ -4,14 +4,15 @@
 }
 
 .dashboard-container-left {
+  display: flex;
+  flex-direction: column;
   width: 33%;
-  margin: 20px;
+  height: 90vh;
 }
 
 .dashboard-container-right {
   display: flex;
   flex-direction: column;
-  width: 66%;
-  margin: 20px;
-
+  width: 67%;
+  height: 90vh;
 }

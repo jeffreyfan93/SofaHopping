@@ -18,13 +18,16 @@ class Sidebar extends React.Component {
   }
 
   toggleForm() {
+    if (this.state.toggleOpen) {
+      this.props.removeSofaErrors();
+    }
     const status = !this.state.toggleOpen;
     this.setState({toggleOpen: status});
   }
 
   showForm() {
     if (this.state.toggleOpen) {
-      return(<SofaFormContainer formType='add'/>);
+      return(<SofaFormContainer formType='add' toggleForm={this.toggleForm}/>);
     }
   }
 
@@ -38,15 +41,16 @@ class Sidebar extends React.Component {
       return(
         <div className="dashboard-sidebar-container">
           <div className="sidebar-user-info">
-            <div className="sidebar-profile-picture"><img src={this.props.currentUser.picture} /></div>
             <div className="name-status">
               <div className="user-name">{first_name} {last_name}</div>
               <div className="user-status">Accepting Guests</div>
             </div>
+            <div className="sidebar-profile-picture"><img src={this.props.currentUser.picture} /></div>
           </div>
-
+          <div id="user-sofas-text">
+            <div className="user-sofas-text">My Available Sofas</div>
+          </div>
           <ul className="user-sofas">
-            <div className="user-sofas-text">My Sofas</div>
             {this.props.currentUserSofas.map(sofa => (
               <MySofaIndexItem
                 key={sofa.id}
@@ -56,7 +60,7 @@ class Sidebar extends React.Component {
             ))}
           </ul>
 
-          <button onClick={this.toggleForm}>Add a Sofa</button>
+          <button onClick={this.toggleForm} className="user-add-sofa">Host my Sofa</button>
           <div>{this.showForm()}</div>
         </div>
       );

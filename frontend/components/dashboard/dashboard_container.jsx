@@ -7,6 +7,7 @@ const DashboardContainer = () => (
   <div className="dashboard-container">
     <div className="dashboard-container-left">
       <SidebarContainer />
+      <div className="place-holder"></div>
     </div>
     <div className="dashboard-container-right">
       <BookingsContainer />
