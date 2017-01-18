@@ -3,6 +3,7 @@
   height: 94%;
   overflow: hidden;
   margin: 0px 15px;
+
 }
 
 .sofas-index-title {
@@ -44,6 +45,10 @@
   border: 1px solid black;
 }
 
+.sofa-item-picture img {
+  height: 100%;
+}
+
 .sofa-info-address-guests {
   display: flex;
   flex-direction: column;
@@ -58,7 +63,7 @@
 }
 
 .sofa-item-reviews {
-
+  margin: 10px;
 }
 
 .sofa-item-request {

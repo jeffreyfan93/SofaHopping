@@ -11,7 +11,7 @@ export const selectCurrentUserSofas = (sofas, currentUser) => {
 export const selectNotMySofas = (sofas, currentUser) => {
   let notMySofas = [];
   Object.keys(sofas).map(id => {
-    if(sofas[id].user_id !== currentUser.id) {
+    if(sofas[id].user_id && (sofas[id].user_id !== currentUser.id)) {
       notMySofas.push(sofas[id]);
     }
   });

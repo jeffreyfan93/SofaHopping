@@ -16,8 +16,6 @@ const SofaReducer = (state = {errors: []}, action) => {
       let response = action.sofas;
       response.errors = [];
       return response;
-      // newState.sofas = action.sofas;
-      // return newState;
     case RECEIVE_SOFA:
       newState[action.sofa.id] = action.sofa;
       return newState;
