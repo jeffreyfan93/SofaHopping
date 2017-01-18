@@ -1,7 +1,7 @@
 import React from 'react';
 import SidebarContainer from './sidebar_container';
-import BookingsContainer from './bookings_container';
-import GuestsContainer from './guests_container';
+import BookingsContainer from '../bookings/bookings_container';
+import GuestsContainer from '../bookings/guests_container';
 
 const DashboardContainer = () => (
   <div className="dashboard-container">
@@ -12,6 +12,7 @@ const DashboardContainer = () => (
     <div className="dashboard-container-right">
       <BookingsContainer />
       <GuestsContainer />
+      <div className="dashboard-container-right-empty"></div>
     </div>
   </div>
 );

@@ -19,8 +19,10 @@ class Navbar extends React.Component {
 
   dashboardOnLogin() {
     const guest = {email:'guest', password:'password'};
-    this.props.router.push("/dashboard");
-    this.props.login(guest);
+    this.props.login(guest).then(() => {
+      this.props.router.push("/dashboard");
+    });
+
   }
 
   logoLink() {

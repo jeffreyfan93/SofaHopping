@@ -1,6 +1,22 @@
 .dashboard-bookings-container {
-  height: 50%;
+  display: flex;
+  flex-direction: column;
+  height: calc(50% - 40px);
   background-color: white;
   margin: 20px;
 
+}
+
+.bookings-title {
+  font-size: 24px;
+  margin: 5px 15px;
+}
+
+.bookings-list {
+  margin: 0px 15px 15px 15px;
+  overflow-y: scroll;
+}
+
+.bookings-list-item {
+  display: flex;
 }

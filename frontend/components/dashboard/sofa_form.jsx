@@ -78,8 +78,8 @@ class SofaForm extends React.Component {
     return(
       <div className="sofa-form-screen">
         <div className="sofa-form-container">
-          <div className="sofa-form-title">{this.formTitle()}</div>
           <form onSubmit={this.handleSubmit} className="sofa-form">
+            <div className="sofa-form-title">{this.formTitle()}</div>
             <div className="sofa-form-inputs">
               <input
                 type="text"

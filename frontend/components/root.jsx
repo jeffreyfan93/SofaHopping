@@ -8,6 +8,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import SofasContainer from './sofas/sofas_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import SplashContainer from './splash/splash_container';
+import RequestFormContainer from './bookings/request_form_container';
 
 import { removeErrors } from '../actions/session_actions';
 
@@ -20,6 +21,13 @@ const Root = ({ store }) => {
     }
   };
 
+  const _redirectIfNotLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+    if (currentUser === null) {
+      replace('/');
+    }
+  };
+
   return (
     <Provider store={store}>
       <Router history={ hashHistory }>
@@ -27,10 +35,9 @@ const Root = ({ store }) => {
           <IndexRoute component={SplashContainer} />
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
-          <Route path="/dashboard" component={DashboardContainer} />
-          <Route path="/sofas" component={SofasContainer}>
-            <Route path="/sofas/:sofaId/request" />
-          </Route>
+          <Route path="/dashboard" component={DashboardContainer} onEnter={_redirectIfNotLoggedIn}/>
+          <Route path="/sofas" component={SofasContainer} onEnter={_redirectIfNotLoggedIn}/>
+          <Route path="/sofas/:sofaId/request" component={RequestFormContainer}/>
         </Route>
 
       </Router>

@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115040920) do
+ActiveRecord::Schema.define(version: 20170118000846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.date     "arrive_date",   null: false
+    t.date     "depart_date",   null: false
+    t.string   "num_of_guests", null: false
+    t.integer  "sofa_id",       null: false
+    t.integer  "guest_id",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "host_id",       null: false
+  end
+
+  add_index "bookings", ["guest_id"], name: "index_bookings_on_guest_id", using: :btree
+  add_index "bookings", ["host_id"], name: "index_bookings_on_host_id", using: :btree
+  add_index "bookings", ["sofa_id"], name: "index_bookings_on_sofa_id", using: :btree
 
   create_table "sofas", force: :cascade do |t|
     t.string   "address",                                                                                                              null: false

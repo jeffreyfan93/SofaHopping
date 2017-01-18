@@ -1,6 +1,23 @@
 .dashboard-guests-container {
-  height: 50%;
+  display: flex;
+  flex-direction: column;
+  height: calc(50% - 40px);
   margin: 20px;
   background-color: white;
 
+}
+
+.guests-title {
+  font-size: 24px;
+  margin: 5px 15px;
+}
+
+.guests-list {
+  height: 80%;
+  margin: 0px 15px 15px 15px;
+  overflow-y: scroll;
+}
+
+.guest-item {
+  display: flex;
 }

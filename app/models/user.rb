@@ -6,6 +6,18 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :sofas
+  has_many(
+    :bookings,
+    primary_key: :id,
+    foreign_key: :guest_id,
+    class_name: "Booking"
+  )
+
+  has_many(
+    :guests,
+    through: :bookings,
+    source: :guest
+  )
 
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
