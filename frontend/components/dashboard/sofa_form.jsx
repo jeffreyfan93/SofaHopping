@@ -2,8 +2,6 @@ import React from 'react';
 import merge from 'lodash/merge';
 import { withRouter } from 'react-router';
 
-import { removeSofaErrors } from '../../actions/sofa_actions';
-
 class SofaForm extends React.Component {
   constructor(props) {
     super(props);
@@ -32,8 +30,21 @@ class SofaForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let sofa = merge({}, this.state, {user_id: parseInt(this.props.currentUser.id)});
-    this.props.action(sofa);
+    const address = `${this.state.address}, ${this.state.city}, ${this.state.state}, ${this.state.zip}`;
+    const geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({ 'address': address}, (results, status) => {
+      if(status === google.maps.GeocoderStatus.OK) {
+        const lat = results[0].geometry.location.lat();
+        const lng = results[0].geometry.location.lng();
+        const sofa = merge({}, this.state, {user_id: parseInt(this.props.currentUser.id), lat: lat, lng: lng});
+        this.props.action(sofa);
+      } else {
+        const sofa = merge({}, this.state, {user_id: parseInt(this.props.currentUser.id)});
+        this.props.action(sofa);
+      }
+    });
+
   }
 
   upload(e) {
@@ -78,8 +89,8 @@ class SofaForm extends React.Component {
     return(
       <div className="sofa-form-screen">
         <div className="sofa-form-container">
+          <div className="sofa-form-title">{this.formTitle()}</div>
           <form onSubmit={this.handleSubmit} className="sofa-form">
-            <div className="sofa-form-title">{this.formTitle()}</div>
             <div className="sofa-form-inputs">
               <input
                 type="text"
@@ -117,10 +128,12 @@ class SofaForm extends React.Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-
-              <button
-                onClick={this.upload}
-                className="sofa-form-upload">Upload image</button>
+              <div className="sofa-form-pic-upload">
+                <button
+                  onClick={this.upload}
+                  className="sofa-form-upload">Upload image</button>
+                <div className="sofa-form-picture"><img src={this.state.picture} /></div>
+              </div>
             </div>
             {this.renderErrors()}
             <div>

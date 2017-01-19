@@ -23,25 +23,23 @@
 
 .sofa-index-item {
   display: flex;
+  flex-direction: column;
+
+  padding: 10px;
   border: 1px solid gray;
   border-left: none;
   border-right: none;
   background-color: blanchedalmond;
 }
 
-.sofa-index-item-info {
+.sofa-index-item-top {
   display: flex;
-  flex-direction: column;
 
-  width: 100%;
-}
-
-.sofa-item-no-reviews {
-  display: flex;
+  padding-bottom: 10px;
 }
 
 .sofa-item-picture {
-  width: 50%;
+  width: 100%;
   border: 1px solid black;
 }
 
@@ -50,109 +48,59 @@
 }
 
 .sofa-info-address-guests {
+  width: 100%;
   display: flex;
   flex-direction: column;
+
+  padding-left: 10px;
 }
 
 .sofa-item-address {
 
 }
 
+.sofa-item-city-state-zip {
+  padding-bottom: 5%;
+}
+
 .sofa-item-num-of-guests {
 
 }
 
-.sofa-item-reviews {
-  margin: 10px;
-}
-
 .sofa-item-request {
-  width: 50%;
-}
-
-
-
-
-
-.user-sofas {
-  height: 70%;
-  margin: 0px 15px;
-  overflow-y: scroll;
-}
-
-#user-sofas-text {
-  display: flex;
   width: 100%;
-  justify-content: flex-start;
-}
-
-.user-sofas-text {
-  font-size: 24px;
-  margin: 15px;
-}
-
-.user-sofa {
   display: flex;
-  flex-direction: column;
-
-  padding: 10px 5px;
-  border: 1px solid gray;
-  border-left: none;
-  border-right: none;
-
-  background-color: blanchedalmond;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.user-sofa-info {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.user-sofa-picture {
-  width: 40%;
-  height: 100%;
-  border: 1px solid black;
-  margin-right: 15px;
-}
-
-.user-sofa-info-right {
-  display: flex;
-  flex-direction: column;
-}
-
-.user-sofa-address {
-  margin-bottom: 15px;
-}
-
-.user-num-guests {
-
-}
-
-.user-reviews {
-  width: 55px;
-  margin-bottom: 10px;
-  padding: 2px;
-  background-color: $dirt-orange;
+.sofa-item-request-link {
+  padding: 10px;
+  background-color: $dark-brown;
   border-radius: 3px;
   color: white;
 }
 
-.user-reviews:hover{
-  transform: scale(1.1);
+.sofa-item-request-link:hover {
+  border: 1px solid $dark-brown;
+  background-color: white;
+  color: $dark-brown
 }
 
-.user-sofa-buttons {
-
+.sofa-item-bottom {
+  display: flex;
 }
 
-.user-sofa-button {
-  margin-right: 15px;
-  padding: 2px;
-  background-color: $dirt-orange;
+.sofa-item-reviews {
+  padding: 10px;
+  background-color: $dark-brown;
   border-radius: 3px;
   color: white;
 }
 
-.user-sofa-button:hover {
-  transform: scale(1.1);
+.sofa-item-reviews:hover {
+  padding: 9px;
+  border: 1px solid $dark-brown;
+  background-color: white;
+  color: $dark-brown
 }

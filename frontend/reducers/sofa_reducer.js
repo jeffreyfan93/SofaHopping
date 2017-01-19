@@ -23,8 +23,9 @@ const SofaReducer = (state = {errors: []}, action) => {
       delete newState[action.id];
       return newState;
     case RECEIVE_SOFA_ERRORS:
+      newState.errors = [];
       const errors = action.errors;
-      return merge({}, state, { errors });
+      return merge({}, newState, { errors });
     case REMOVE_SOFA_ERRORS:
       newState.errors = [];
       return newState;

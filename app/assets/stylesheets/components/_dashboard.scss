@@ -1,8 +1,15 @@
+// .dashboard-screen {
+//   display: flex;
+//   justify-content: center;
+//   background-color: $off-white;
+// }
+
 .dashboard-container {
   display: flex;
-  background-color: $off-white;
   font-family: $sans-pro;
+  // width: 70%;
 
+  background-color: $off-white;
 }
 
 .dashboard-container-left {

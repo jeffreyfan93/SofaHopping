@@ -7,9 +7,7 @@ class Api::BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    if @booking.arrive_date > @booking.depart_date
-      render json: @booking.errors.full_messages << "Arrival Date cannot be after Departure Date", status: 422
-    elsif @booking.save
+    if @booking.save
       render :show
     else
       render json: @booking.errors.full_messages, status: 422

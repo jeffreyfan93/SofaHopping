@@ -17,12 +17,17 @@ class GuestsIndexItem extends React.Component {
     const { arrive_date, depart_date, num_of_guests } = this.props.booking;
     return(
       <li className="guest-item">
-        <div><img src={picture} /></div>
-        <div>{first_name} {last_name}</div>
-        <div>Reserved at {address}, {city}, {state}, {zip}</div>
-        <div>From {arrive_date} to {depart_date}</div>
-        <div>{num_of_guests} guests</div>
-        <button onClick={this.removeBooking}>Cancel Booking</button>
+        <div className="guest-picture"><img src={picture} /></div>
+        <div className="guest-info">
+          <div className="guest-name">{first_name} {last_name}</div>
+          <div className="guest-address">{address}</div>
+          <div className="guest-city-state-zip">{city}, {state}, {zip}</div>
+          <div className="guest-dates">{arrive_date} to {depart_date}</div>
+          <div className="guest-num-of-guests">{num_of_guests} guests</div>
+        </div>
+        <div className="guest-cancel">
+          <button onClick={this.removeBooking} className="guest-cancel-button">Cancel Booking</button>
+        </div>
       </li>
     );
   }

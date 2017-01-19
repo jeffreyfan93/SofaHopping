@@ -21,7 +21,7 @@
   margin-bottom: 10px;
 }
 
-.name-status {
+.sidebar-name-status {
   display: inline-block;
   text-align: center;
   width: 50%;
@@ -40,34 +40,34 @@
   border: 1px solid black;
 }
 
-.user-name {
+.sidebar-user-name {
   font-weight: 600;
   font-size: 28px;
 }
 
-.user-status {
+.sidebar-user-status {
   font-size: 18px;
   color: green;
 }
 
-.user-sofas {
+.sidebar-user-sofas {
   height: 70%;
   margin: 0px 15px;
   overflow-y: scroll;
 }
 
-#user-sofas-text {
+#sidebar-user-sofas-text {
   display: flex;
   width: 100%;
   justify-content: flex-start;
 }
 
-.user-sofas-text {
+.sidebar-user-sofas-text {
   font-size: 24px;
   margin: 15px;
 }
 
-.user-sofa {
+.sidebar-user-sofa {
   display: flex;
   flex-direction: column;
 
@@ -79,61 +79,63 @@
   background-color: blanchedalmond;
 }
 
-.user-sofa-info {
+.sidebar-user-sofa-info {
   display: flex;
   margin-bottom: 10px;
 }
 
-.user-sofa-picture {
+.sidebar-user-sofa-picture {
   width: 40%;
   height: 100%;
   border: 1px solid black;
   margin-right: 15px;
 }
 
-.user-sofa-info-right {
+.sidebar-user-sofa-info-right {
   display: flex;
   flex-direction: column;
 }
 
-.user-sofa-address {
+.sidebar-user-sofa-address {
   margin-bottom: 15px;
 }
 
-.user-num-guests {
+.sidebar-user-num-guests {
 
 }
 
-.user-reviews {
+.sidebar-user-reviews {
   width: 55px;
   margin-bottom: 10px;
   padding: 2px;
-  background-color: $dirt-orange;
+  border: 1px solid $dark-brown;
   border-radius: 3px;
-  color: white;
+  color: $dark-brown;
 }
 
-.user-reviews:hover{
-  transform: scale(1.1);
+.sidebar-user-reviews:hover{
+  background-color: $dark-brown;
+  color: blanchedalmond;
 }
 
-.user-sofa-buttons {
+.sidebar-user-sofa-buttons {
 
 }
 
-.user-sofa-button {
+.sidebar-user-sofa-button {
   margin-right: 15px;
   padding: 2px;
-  background-color: $dirt-orange;
+  border: 1px solid $dark-brown;
   border-radius: 3px;
-  color: white;
+  color: $dark-brown;
 }
 
-.user-sofa-button:hover {
-  transform: scale(1.1);
+.sidebar-user-sofa-button:hover {
+  background-color: $dark-brown;
+  color: blanchedalmond;
 }
 
-.user-add-sofa {
+.sidebar-user-add-sofa {
   margin: 10px;
   padding: 10px;
   border-radius: 3px;
@@ -142,85 +144,8 @@
   color: white;
 }
 
-// sofa-form
-
-.sofa-form-screen {
-  position: fixed;
-  left: 34%;
-  top: 10vh;
-  width: 66%;
-  height: 90vh;
-
-  background-color: $off-white;
-}
-
-.sofa-form-container {
-  background-color: white;
-
-  position: absolute;
-  height: 500px;
-  width: 350px;
-  margin: -250px 0 0 -175px;
-  top: 50%;
-  left: 50%;
-
-  border-radius: 3px;
-
-  font-family: $sans-pro;
-}
-
-.sofa-form-title {
-  text-align: center;
-  font-size: 24px;
-  background-color: $blue-off-white;
+.sidebar-user-add-sofa:hover {
+  border: 1px solid $dark-brown;
   color: $dark-brown;
-  padding: 15px;
-}
-
-.sofa-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 439px;
-}
-
-.sofa-form-inputs {
-  padding: 8px;
-}
-
-.sofa-form-input {
-  height: 40px;
-  width: 147px;
-  margin: 5px;
-  padding: 4px;
-  border-radius: 3px;
-  border: 1px solid gray;
-}
-
-.sofa-form-num-of-guests {
-  width: 322px;
-  margin: 5px;
-  border: 1px solid gray;
-}
-
-.sofa-form-upload {
-  display: block;
-
-  border-radius: 3px;
-  padding: 5px;
-  margin: 5px auto;
-
-  background-color: $dirt-orange;
-  color: white;
-}
-
-.sofa-form-submit {
-  display: block;
-
-  border-radius: 3px;
-  margin: 15px auto;
-  padding: 14px 35px;
-
-  background-color: $dirt-orange;
-  color: white;
+  background-color: white;
 }
