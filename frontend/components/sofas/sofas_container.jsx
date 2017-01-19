@@ -6,16 +6,18 @@ import MapContainer from './map_container';
 
 const SofasContainer = () => {
   return (
-    <div className="sofa-container">
-      <div className="sofa-container-top">
-        <SearchContainer />
-      </div>
-      <div className="sofa-container-bottom">
-        <div className="sofa-container-bottom-left">
-          <SofaIndexContainer />
+    <div className="sofa-screen">
+      <div className="sofa-container">
+        <div className="sofa-container-top">
+          <SearchContainer />
         </div>
-        <div className="sofa-container-bottom-right">
-          <MapContainer />
+        <div className="sofa-container-bottom">
+          <div className="sofa-container-bottom-left">
+            <SofaIndexContainer />
+          </div>
+          <div className="sofa-container-bottom-right">
+            <MapContainer />
+          </div>
         </div>
       </div>
     </div>

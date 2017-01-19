@@ -1,0 +1,114 @@
+.request-screen {
+  background-color: $off-white;
+  width: 100%;
+  height: 90vh;
+}
+
+.request-form-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  height: 500px;
+  width: 350px;
+  margin: -250px 0 0 -175px;
+  top: 50%;
+  left: 50%;
+
+  border-radius: 3px;
+
+  font-family: $sans-pro;
+}
+
+.request-form-title {
+  display: flex;
+  justify-content: center;
+
+  font-size: 24px;
+  color: $dark-brown;
+  background-color: $blue-off-white;
+  padding: 15px;
+  border-radius: 3px 3px 0 0;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 5px;
+}
+
+.request-form-arrival {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 40px;
+  width: 316px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.request-form-arrival-title {
+}
+
+.request-form-arrival-input {
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.request-form-depart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 40px;
+  width: 316px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.request-form-depart-title {
+
+}
+
+.request-form-depart-input {
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 2px;
+
+}
+
+.request-form-num-of-guests {
+  height: 40px;
+  width: 314px;
+  margin: 5px;
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
+
+.request-form-submit-button {
+  display: flex;
+  justify-content: center;
+  height: 42px;
+  width: 316px;
+  padding: none;
+  margin: 5px;
+  border-radius: 3px;
+
+  font-size: 16px;
+  background-color: $dark-brown;
+  color: white;
+}
+
+.request-form-errors-list {
+  margin-left: 17px;
+}
+
+.request-form-error {
+
+}

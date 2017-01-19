@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   height: calc(50% - 40px);
-  margin: 20px;
   background-color: white;
+  margin: 20px;
 
 }
 
@@ -20,4 +20,60 @@
 
 .guest-item {
   display: flex;
+
+  padding: 10px;
+  border: 1px solid gray;
+  border-left: 0;
+  border-right: 0;
+}
+
+.guest-picture {
+  width: 100%;
+}
+
+.guest-info {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.guest-name {
+  padding-bottom: 5%;
+}
+
+.guest-address {
+
+}
+
+.guest-city-state-zip {
+  padding-bottom: 5%;
+}
+
+.guest-dates {
+
+}
+
+.guest-num-of-guests {
+
+}
+
+.guest-cancel {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.guest-cancel-button {
+  height: 20px;
+  padding: 10px;
+  background-color: $dark-brown;
+  border-radius: 3px;
+  color: white;
+}
+
+.guest-cancel-button:hover {
+  border: 1px solid $dark-brown;
+  color: $dark-brown;
+  background-color: white;
 }

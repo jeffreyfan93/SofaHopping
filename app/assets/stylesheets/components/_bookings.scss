@@ -19,4 +19,57 @@
 
 .bookings-list-item {
   display: flex;
+
+  padding: 10px;
+  border: 1px solid gray;
+  border-left: 0;
+  border-right: 0;
+}
+
+.bookings-picture {
+  width: 100%;
+
+}
+
+.bookings-info {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.bookings-host {
+  padding-bottom: 5%;
+}
+
+.bookings-address {
+
+}
+
+.bookings-city-state-zip {
+  padding-bottom: 5%;
+}
+
+.bookings-dates {
+
+}
+
+.bookings-cancel {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.bookings-cancel-button {
+  height: 20px;
+  padding: 10px;
+  background-color: $dark-brown;
+  border-radius: 3px;
+  color: white;
+}
+
+.bookings-cancel-button:hover {
+  border: 1px solid $dark-brown;
+  color: $dark-brown;
+  background-color: white;
 }

@@ -11,6 +11,7 @@ import SplashContainer from './splash/splash_container';
 import RequestFormContainer from './bookings/request_form_container';
 
 import { removeErrors } from '../actions/session_actions';
+import { removeBookingErrors } from '../actions/booking_actions';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -28,6 +29,10 @@ const Root = ({ store }) => {
     }
   };
 
+  const _removeBookingErrors = () => {
+    store.dispatch(removeBookingErrors());
+  };
+
   return (
     <Provider store={store}>
       <Router history={ hashHistory }>
@@ -37,7 +42,7 @@ const Root = ({ store }) => {
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
           <Route path="/dashboard" component={DashboardContainer} onEnter={_redirectIfNotLoggedIn}/>
           <Route path="/sofas" component={SofasContainer} onEnter={_redirectIfNotLoggedIn}/>
-          <Route path="/sofas/:sofaId/request" component={RequestFormContainer}/>
+          <Route path="/sofas/:sofaId/request" component={RequestFormContainer} onEnter={_removeBookingErrors()}/>
         </Route>
 
       </Router>

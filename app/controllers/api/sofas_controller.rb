@@ -22,7 +22,7 @@ class Api::SofasController < ApplicationController
     if @sofa.update_attributes(sofa_params)
       render :show
     else
-      render json: @sofa.errors.full_messages
+      render json: @sofa.errors.full_messages, status: 422
     end
   end
 

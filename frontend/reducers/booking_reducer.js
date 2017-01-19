@@ -17,15 +17,15 @@ const BookingReducer = (state = {errors: []}, action) => {
       response.errors = [];
       return response;
     case RECEIVE_BOOKING:
-      console.log(action);
       newState[action.booking.id] = action.booking;
       return newState;
     case REMOVE_BOOKING:
       delete newState[action.id];
       return newState;
     case RECEIVE_BOOKING_ERRORS:
+      newState.errors = [];
       const errors = action.errors;
-      return merge({}, state, { errors });
+      return merge({}, newState, { errors });
     case REMOVE_BOOKING_ERRORS:
       newState.errors = [];
       return newState;

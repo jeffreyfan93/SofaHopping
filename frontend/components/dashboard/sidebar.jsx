@@ -41,16 +41,16 @@ class Sidebar extends React.Component {
       return(
         <div className="dashboard-sidebar-container">
           <div className="sidebar-user-info">
-            <div className="name-status">
-              <div className="user-name">{first_name} {last_name}</div>
-              <div className="user-status">Accepting Guests</div>
+            <div className="sidebar-name-status">
+              <div className="sidebar-user-name">{first_name} {last_name}</div>
+              <div className="sidebar-user-status">Accepting Guests</div>
             </div>
             <div className="sidebar-profile-picture"><img src={this.props.currentUser.picture} /></div>
           </div>
-          <div id="user-sofas-text">
-            <div className="user-sofas-text">My Available Sofas</div>
+          <div id="sidebar-user-sofas-text">
+            <div className="sidebar-user-sofas-text">My Available Sofas</div>
           </div>
-          <ul className="user-sofas">
+          <ul className="sidebar-user-sofas">
             {this.props.currentUserSofas.map(sofa => (
               <MySofaIndexItem
                 key={sofa.id}
@@ -60,7 +60,7 @@ class Sidebar extends React.Component {
             ))}
           </ul>
 
-          <button onClick={this.toggleForm} className="user-add-sofa">Host my Sofa</button>
+          <button onClick={this.toggleForm} className="sidebar-user-add-sofa">Host my Sofa</button>
           <div>{this.showForm()}</div>
         </div>
       );

@@ -1,5 +1,58 @@
 .sofas-search-container {
-  height: 71%;
+  height: calc(100% - 40px);
+  width: 70%;
   margin: 20px;
   background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sofas-search-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sofas-search-params {
+
+}
+
+.search-city {
+  margin: 10px;
+  height: 30px;
+
+  background-color: $dark-brown;
+  color: white;
+  font-size: 18px;
+
+}
+
+.search-num-of-guests {
+  margin: 10px;
+  height: 30px;
+
+  background-color: $dark-brown;
+  color: white;
+  font-size: 18px;
+
+}
+
+.search-submit-button {
+  padding: 10px;
+  background-color: $dark-brown;
+  border-radius: 3px;
+  color: white;
+  margin: 10px;
+
+  font-size: 20px;
+
+}
+
+.search-submit-button:hover {
+  border: 1px solid $dark-brown;
+  background-color: white;
+  color: $dark-brown
 }

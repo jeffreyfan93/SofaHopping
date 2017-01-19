@@ -1,14 +1,25 @@
+// .sofa-screen {
+//   display: flex;
+//   justify-content: center;
+//   background-color: $off-white;
+// }
+
 .sofa-container {
   display: flex;
   flex-direction: column;
-  background-color: $off-white;
   font-family: $sans-pro;
+  // width: 70%;
+
+  background-color: $off-white;
 
 }
 
 .sofa-container-top {
   width: 100%;
   height: 20vh;
+
+  display: flex;
+  justify-content: center;
 }
 
 .sofa-container-bottom {
