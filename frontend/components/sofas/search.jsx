@@ -78,8 +78,7 @@ class Search extends React.Component {
 
       let marker = new google.maps.Marker({
         position: latlng,
-        map: map,
-        animation: google.maps.Animation.DROP
+        map: map
       });
       marker.addListener('click', () => {
         infoWindow.open(map, marker);

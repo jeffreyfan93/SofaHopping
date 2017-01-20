@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import ReviewsContainer from '../reviews/reviews_container';
+
 class SofaIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +21,7 @@ class SofaIndexItem extends React.Component {
 
   showReviews() {
     if(this.state.toggleOpen) {
-      return(<ReviewContianer />);
+      return(<ReviewsContainer sofa={this.props.sofa}/>);
     }
   }
 
@@ -41,8 +43,8 @@ class SofaIndexItem extends React.Component {
         </div>
         <div className="sofa-item-bottom">
           <button onClick={this.toggleReview} className="sofa-item-reviews">Reviews</button>
-          <div>{this.showReviews()}</div>
         </div>
+        {this.showReviews()}
       </li>
     );
   }
