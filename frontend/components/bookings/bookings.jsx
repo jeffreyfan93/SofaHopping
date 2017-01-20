@@ -12,6 +12,14 @@ class Bookings extends React.Component {
   }
 
   render() {
+    this.props.bookings.sort((a, b) => {
+      if (a.arrive_date < b.arrive_date) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+
     return (
       <div className="dashboard-bookings-container">
         <div className="bookings-title">My Bookings</div>
