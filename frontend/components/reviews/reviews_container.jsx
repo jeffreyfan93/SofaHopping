@@ -6,7 +6,7 @@ import { selectReviews } from '../selectors/review_selector';
 
 const mapStateToProps = (state, ownProps) => ({
   reviews: selectReviews(state.reviews, ownProps.sofa.id),
-  currentUserId: state.session.currentUser.id,
+  currentUser: state.session.currentUser,
   sofaId: ownProps.sofa.id
 });
 

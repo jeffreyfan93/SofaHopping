@@ -20,7 +20,7 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.props.formType === "add") {
-      let review = merge({}, this.state, {user_id: this.props.currentUserId, sofa_id: this.props.sofaId});
+      let review = merge({}, this.state, {user_id: this.props.currentUser.id, sofa_id: this.props.sofaId});
 
       this.props.addReview(review).then(this.props.toggleForm());
     } else {

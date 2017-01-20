@@ -29,7 +29,7 @@ class ReviewIndex extends React.Component {
         <ReviewForm
           formType="add"
           sofaId={this.props.sofaId}
-          currentUserId={this.props.currentUserId}
+          currentUser={this.props.currentUser}
           review={review}
           addReview={this.props.addReview}
           toggleForm={this.toggleForm} />
@@ -47,7 +47,7 @@ class ReviewIndex extends React.Component {
               review={review}
               deleteReview={this.props.deleteReview}
               updateReview={this.props.updateReview}
-              currentUserId={this.props.currentUserId}
+              currentUser={this.props.currentUser}
               sofaId={this.props.sofaId}
               fetchReviews={this.props.fetchReviews} />
           ))}
