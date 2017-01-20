@@ -1,13 +1,14 @@
-// .dashboard-screen {
-//   display: flex;
-//   justify-content: center;
-//   background-color: $off-white;
-// }
+.dashboard-screen {
+  display: flex;
+  justify-content: center;
+  background-color: $off-white;
+}
 
 .dashboard-container {
   display: flex;
   font-family: $sans-pro;
-  // width: 70%;
+  width: 70%;
+  min-width: 900px;
 
   background-color: $off-white;
 }

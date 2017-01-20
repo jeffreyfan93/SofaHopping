@@ -5,11 +5,9 @@ import ReviewForm from './review_form';
 class ReviewIndexItem extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       toggleOpen: false
     };
-
     this.ownReview = this.ownReview.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
     this.removeReview = this.removeReview.bind(this);
@@ -22,7 +20,7 @@ class ReviewIndexItem extends React.Component {
   }
 
   ownReview() {
-    if(this.props.currentUserId === this.props.review.user_id) {
+    if(this.props.currentUser.id === this.props.review.user_id) {
       return (
         <div className="review-own-buttons">
           <button onClick={this.toggleForm} className="review-update-button">Update</button>
@@ -54,6 +52,7 @@ class ReviewIndexItem extends React.Component {
     return(
       <li className="review-index-item">
         <div className="review-item-body">{this.props.review.body}</div>
+        <div className="review-item-author">Review by: {this.props.review.user.first_name} {this.props.review.user.last_name}</div>
         <div className="review-item-content">
           {this.ownReview()}
           {this.showUpdateForm()}
