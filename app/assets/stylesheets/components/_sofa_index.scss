@@ -75,16 +75,16 @@
 }
 
 .sofa-item-request-link {
-  padding: 10px;
-  background-color: $dark-brown;
+  padding: 9px;
+  border: 1px solid $dark-brown;
   border-radius: 3px;
-  color: white;
+  background-color: white;
+  color: $dark-brown
 }
 
 .sofa-item-request-link:hover {
-  border: 1px solid $dark-brown;
-  background-color: white;
-  color: $dark-brown
+  background-color: $dark-brown;
+  color: white;
 }
 
 .sofa-item-bottom {
@@ -93,15 +93,14 @@
 }
 
 .sofa-item-reviews {
-  padding: 10px;
-  background-color: $dark-brown;
+  padding: 9px;
+  border: 1px solid $dark-brown;
   border-radius: 3px;
-  color: white;
+  background-color: white;
+  color: $dark-brown
 }
 
 .sofa-item-reviews:hover {
-  padding: 9px;
-  border: 1px solid $dark-brown;
-  background-color: white;
-  color: $dark-brown
+  background-color: $dark-brown;
+  color: white;
 }
