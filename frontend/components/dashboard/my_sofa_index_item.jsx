@@ -50,7 +50,6 @@ class MySofaIndexItem extends React.Component {
             <div className="sidebar-user-num-guests">Spots available: {num_of_guests}</div>
           </div>
         </div>
-        <button className="sidebar-user-reviews">Reviews</button>
         <div className="sidebar-user-sofa-buttons">
           <button onClick={this.toggleForm} className="sidebar-user-sofa-button">Update Sofa</button>
           <button onClick={this.removeSofa} className="sidebar-user-sofa-button">Remove Sofa</button>
