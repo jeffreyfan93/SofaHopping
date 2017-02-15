@@ -23,21 +23,6 @@ users.push(demo3)
 users.push(demo4)
 users.push(demo5)
 
-# My Bookings
-Booking.create({ arrive_date: Date.new(2017,6,17), depart_date: Date.new(2017,6,19), num_of_guests: 1, sofa_id: 3, guest_id: 1, host_id: 2})
-Booking.create({ arrive_date: Date.new(2017,7,4), depart_date: Date.new(2017,7,11), num_of_guests: 2, sofa_id: 4, guest_id: 1, host_id: 3})
-Booking.create({ arrive_date: Date.new(2017,8,1), depart_date: Date.new(2017,8,10), num_of_guests: 2, sofa_id: 5, guest_id: 1, host_id: 4})
-Booking.create({ arrive_date: Date.new(2017,12,9), depart_date: Date.new(2017,12,10), num_of_guests: 1, sofa_id: 6, guest_id: 1, host_id: 5})
-Booking.create({ arrive_date: Date.new(2017,3,3), depart_date: Date.new(2017,3,5), num_of_guests: 5, sofa_id: 7, guest_id: 1, host_id: 6})
-Booking.create({ arrive_date: Date.new(2017,4,12), depart_date: Date.new(2017,4,13), num_of_guests: 2, sofa_id: 8, guest_id: 1, host_id: 7})
-Booking.create({ arrive_date: Date.new(2017,8,13), depart_date: Date.new(2017,8,16), num_of_guests: 1, sofa_id: 9, guest_id: 1, host_id: 8})
-
-# My Guests
-Booking.create({ arrive_date: Date.new(2017,6,17), depart_date: Date.new(2017,6,19), num_of_guests: 1, sofa_id: 1, guest_id: 24, host_id: 1})
-Booking.create({ arrive_date: Date.new(2017,11,11), depart_date: Date.new(2017,11,15), num_of_guests: 3, sofa_id: 1, guest_id: 15, host_id: 1})
-Booking.create({ arrive_date: Date.new(2017,8,1), depart_date: Date.new(2017,8,10), num_of_guests: 2, sofa_id: 2, guest_id: 45, host_id: 1})
-Booking.create({ arrive_date: Date.new(2017,12,9), depart_date: Date.new(2017,12,10), num_of_guests: 1, sofa_id: 2, guest_id: 33, host_id: 1})
-
 # Create All Users
 users.push(User.create({email: Faker::Internet.unique.email, password: 'password', first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, picture: "http://res.cloudinary.com/dgzdk4eq8/image/upload/v1484806237/iStock_000045284624_Medium_hmx6j1.jpg"}))
 users.push(User.create({email: Faker::Internet.unique.email, password: 'password', first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, picture: "http://res.cloudinary.com/dgzdk4eq8/image/upload/v1484806215/smiling-woman_fymvn3.jpg"}))
@@ -239,6 +224,20 @@ Sofa.create({ lat: 42.315303, lng: -71.0917432, address: "129 Crawford St", zip:
 Sofa.create({ lat: 42.3597921, lng: -71.06509970000002, address: "40 Joy St", zip: 02114, city: 'Boston', state: 'MA', num_of_guests: Faker::Number.between(1,5), user_id: users.sample.id, picture: "http://res.cloudinary.com/dgzdk4eq8/image/upload/v1484801048/living-room-sofas-hb-e_go8x9q.jpg"})
 Sofa.create({ lat: 42.3593276, lng: -71.06579929999998, address: "33 Myrtle St", zip: 02114, city: 'Boston', state: 'MA', num_of_guests: Faker::Number.between(1,5), user_id: users.sample.id, picture: "http://res.cloudinary.com/dgzdk4eq8/image/upload/v1484801061/PH131451_ektorp_fabric_sofas_seo_bxewmi.jpg"})
 
+# My Bookings
+Booking.create({ arrive_date: Date.new(2017,6,17), depart_date: Date.new(2017,6,19), num_of_guests: 1, sofa_id: 3, guest_id: 1, host_id: 2})
+Booking.create({ arrive_date: Date.new(2017,7,4), depart_date: Date.new(2017,7,11), num_of_guests: 2, sofa_id: 4, guest_id: 1, host_id: 3})
+Booking.create({ arrive_date: Date.new(2017,8,1), depart_date: Date.new(2017,8,10), num_of_guests: 2, sofa_id: 5, guest_id: 1, host_id: 4})
+Booking.create({ arrive_date: Date.new(2017,12,9), depart_date: Date.new(2017,12,10), num_of_guests: 1, sofa_id: 6, guest_id: 1, host_id: 5})
+Booking.create({ arrive_date: Date.new(2017,3,3), depart_date: Date.new(2017,3,5), num_of_guests: 5, sofa_id: 7, guest_id: 1, host_id: 6})
+Booking.create({ arrive_date: Date.new(2017,4,12), depart_date: Date.new(2017,4,13), num_of_guests: 2, sofa_id: 8, guest_id: 1, host_id: 7})
+Booking.create({ arrive_date: Date.new(2017,8,13), depart_date: Date.new(2017,8,16), num_of_guests: 1, sofa_id: 9, guest_id: 1, host_id: 8})
+
+# My Guests
+Booking.create({ arrive_date: Date.new(2017,6,17), depart_date: Date.new(2017,6,19), num_of_guests: 1, sofa_id: 1, guest_id: 24, host_id: 1})
+Booking.create({ arrive_date: Date.new(2017,11,11), depart_date: Date.new(2017,11,15), num_of_guests: 3, sofa_id: 1, guest_id: 15, host_id: 1})
+Booking.create({ arrive_date: Date.new(2017,8,1), depart_date: Date.new(2017,8,10), num_of_guests: 2, sofa_id: 2, guest_id: 45, host_id: 1})
+Booking.create({ arrive_date: Date.new(2017,12,9), depart_date: Date.new(2017,12,10), num_of_guests: 1, sofa_id: 2, guest_id: 33, host_id: 1})
 
 # List of Reviews
 reviews = [
