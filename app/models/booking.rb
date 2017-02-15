@@ -33,16 +33,18 @@ class Booking < ActiveRecord::Base
   end
 
   def not_overlapping
-    if arrive_date && depart_date
-      sofa.bookings.each do |booking|
-        booked_arrive = booking.arrive_date
-        booked_depart = booking.depart_date
-        if arrive_date.between?(booked_arrive, booked_depart - 1)
-          errors.add(:This, "place has already been reserved from #{booked_arrive} to #{booked_depart}")
-        elsif depart_date.between?(booked_arrive + 1, booked_depart)
-          errors.add(:This, "place has already been reserved from #{booked_arrive} to #{booked_depart}")
-        elsif booked_arrive.between?(arrive_date, depart_date - 1)
-          errors.add(:This, "place has already been reserved from #{booked_arrive} to #{booked_depart}")
+    if sofa
+      if arrive_date && depart_date
+        sofa.bookings.each do |booking|
+          booked_arrive = booking.arrive_date
+          booked_depart = booking.depart_date
+          if arrive_date.between?(booked_arrive, booked_depart - 1)
+            errors.add(:This, "place has already been reserved from #{booked_arrive} to #{booked_depart}")
+          elsif depart_date.between?(booked_arrive + 1, booked_depart)
+            errors.add(:This, "place has already been reserved from #{booked_arrive} to #{booked_depart}")
+          elsif booked_arrive.between?(arrive_date, depart_date - 1)
+            errors.add(:This, "place has already been reserved from #{booked_arrive} to #{booked_depart}")
+          end
         end
       end
     end
