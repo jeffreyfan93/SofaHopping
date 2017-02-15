@@ -10,7 +10,7 @@ class Search extends React.Component {
       city: "San Francisco",
       num_of_guests: ""
     };
-
+    
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }

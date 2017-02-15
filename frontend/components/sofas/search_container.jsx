@@ -4,9 +4,12 @@ import { fetchSearchSofas } from '../../actions/sofa_actions';
 import { selectNotMySofas } from '../selectors/sofa_selector';
 
 
-const mapStateToProps = state => ({
-  sofas: selectNotMySofas(state.sofas, state.session.currentUser)
-});
+const mapStateToProps = state => {
+  debugger
+  return({
+    sofas: selectNotMySofas(state.sofas, state.session.currentUser)
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchSearchSofas: (city, guests) => dispatch(fetchSearchSofas(city, guests))
