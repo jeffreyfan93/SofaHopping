@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Sofas from './sofas';
 import { selectNotMySofas } from '../selectors/sofa_selector';
-import { fetchSearchSofas } from '../../actions/sofa_actions';
+import { fetchSearchSofas, fetchSofas } from '../../actions/sofa_actions';
 
 
 const mapStateToProps = state => {
-  debugger
   return({
     sofas: selectNotMySofas(state.sofas, state.session.currentUser)
   });

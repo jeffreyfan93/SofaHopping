@@ -5,7 +5,6 @@ import { selectNotMySofas } from '../selectors/sofa_selector';
 
 
 const mapStateToProps = state => {
-  debugger
   return({
     sofas: selectNotMySofas(state.sofas, state.session.currentUser)
   });
