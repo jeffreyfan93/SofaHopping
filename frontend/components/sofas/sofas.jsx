@@ -1,5 +1,4 @@
 import React from 'react';
-// import SearchContainer from './search_container';
 import SofaIndexItem from './sofa_index_item';
 
 
@@ -80,7 +79,8 @@ class Sofas extends React.Component {
 
       let marker = new google.maps.Marker({
         position: latlng,
-        map: map
+        map: map,
+        animation: null
       });
       marker.addListener('click', () => {
         infoWindow.open(map, marker);
