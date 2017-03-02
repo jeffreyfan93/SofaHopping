@@ -21,6 +21,14 @@ class Sofas extends React.Component {
 
   componentDidMount() {
     this.props.fetchSearchSofas(this.state.city, this.state.num_of_guests);
+    $('.sofa-index-item').hover(
+      (e) => {
+        this.toggleBounce(e);
+      },
+      (e) => {
+        this.toggleBounce(e);
+      }
+    );
   }
 
   componentDidUpdate(prevProps, prevState) {
