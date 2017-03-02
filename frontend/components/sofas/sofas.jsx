@@ -8,13 +8,16 @@ class Sofas extends React.Component {
 
     this.state = {
       city: "San Francisco",
-      num_of_guests: ""
+      num_of_guests: "",
+      markers: []
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
-  }
+    this.renderMap = this.renderMap.bind(this);
+    this.toggleBounce = this.toggleBounce.bind(this);
 
+  }
 
   componentDidMount() {
     this.props.fetchSearchSofas(this.state.city, this.state.num_of_guests);
@@ -24,6 +27,14 @@ class Sofas extends React.Component {
     if(prevProps.sofas !== this.props.sofas) {
       this.renderMap(this.state.city);
     }
+    $('.sofa-index-item').hover(
+      (e) => {
+        this.toggleBounce(e);
+      },
+      (e) => {
+        this.toggleBounce(e);
+      }
+    );
   }
 
   update(field) {
@@ -67,6 +78,7 @@ class Sofas extends React.Component {
     }
 
     let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    let markers = [];
 
     this.props.sofas.map(sofa => {
       const lat = parseFloat(sofa.lat);
@@ -80,12 +92,30 @@ class Sofas extends React.Component {
       let marker = new google.maps.Marker({
         position: latlng,
         map: map,
+        id: sofa.id,
         animation: null
       });
+      markers.push(marker);
+
       marker.addListener('click', () => {
         infoWindow.open(map, marker);
       });
     });
+    this.state.markers = markers;
+  }
+
+  toggleBounce(e) {
+    const { markers } = this.state;
+    const sofaId = parseInt(e.currentTarget.id);
+    for (let i = 0; i < markers.length; i++) {
+      if(markers[i].id === sofaId) {
+        if(markers[i].getAnimation() !== null) {
+          markers[i].setAnimation(null);
+        } else {
+          markers[i].setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+    }
   }
 
   render() {

@@ -29,7 +29,7 @@ class SofaIndexItem extends React.Component {
     const { address, city, state, zip, num_of_guests, picture, id } = this.props.sofa;
 
     return(
-      <li className="sofa-index-item">
+      <li className="sofa-index-item" id={id}>
         <div className="sofa-index-item-top">
           <div className="sofa-item-picture"><img src={picture} /></div>
           <div className="sofa-info-address-guests">
